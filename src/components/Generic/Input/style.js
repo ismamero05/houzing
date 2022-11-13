@@ -1,37 +1,5 @@
 import styled from "styled-components";
 
-const getType = ({type}) => {
-    switch (type) {
-        case 'dark':
-            return {
-                background: 'transparent',
-                color: '#FFFFFF',
-                border: '1px solid #FFFFFF'
-            };
-
-        case 'light':
-            return {
-                background: '#FFFFFF',
-                color: '#0D263B',
-                border: '1px solid #E6E9EC'
-            };
-
-        case 'primary':
-            return {
-                background: '0061DF',
-                color: '#FFFFFF',
-                border: 'none'
-            };
-
-        default:
-            return {
-                background: '0061DF',
-                color: '#FFFFFF',
-                border: 'none'
-            };
-    }
-}
-
 const Container = styled.input`
     display: flex;
     align-items: center;
