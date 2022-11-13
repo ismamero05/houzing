@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
+import { Button } from "../Generic/Button";
 import { Container, Link, Logo, Main, Section, Wrapper } from "./style";
 
 export const Navbar = () => {
@@ -14,14 +15,16 @@ export const Navbar = () => {
                     </Section>
                     <Section>
                         {
-                            navbar.map(({title, path}, index) => {
-                                return (
+                            navbar.map(({title, path, hidden}, index) => {
+                                return !hidden && (
                                     <Link className={({isActive}) => isActive && 'active'} key={index} to={path}>{title}</Link>
                                     )
                                 })
                             }
                     </Section>
-                    <Section>3</Section>
+                    <Section>
+                        <Button onClick={() => navigate('/signin')} width={120} type={'dark'}>Sign In</Button>
+                    </Section>
                 </Wrapper>
             </Main>
             <Outlet />
