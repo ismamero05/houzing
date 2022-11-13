@@ -40,3 +40,12 @@ body {
   
   color: #0D263B;
 }
+
+.info {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #696969;
+}
