@@ -22,7 +22,6 @@ const Wrapper = styled.div`
     color: #ffffff;
     padding: var(--padding);
     height: 64px;
-    max-width: 1440px;
     width: 100%;
 `
 
@@ -41,10 +40,14 @@ const Logo = styled(LogoImg)`
     margin-right: 12px;
 `
 
+const LogoTitle = styled.h3`
+    color: #ffffff;
+`
+
 const Link  = styled(NavLink)`
     text-decoration: none;
     color: #ffffff;
     padding: 0 32px;
 `
 
-export { Container, Wrapper, Section, Logo, Link, Main }
+export { Container, Wrapper, Section, Logo, Link, Main, LogoTitle }

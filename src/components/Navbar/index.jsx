@@ -1,8 +1,9 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
+import { Filter } from "../Filter";
 import { Button } from "../Generic/Button";
-import { Container, Link, Logo, Main, Section, Wrapper } from "./style";
+import { Container, Link, Logo, Main, Section, Wrapper, LogoTitle } from "./style";
 
 export const Navbar = () => {
     const navigate = useNavigate()
@@ -11,7 +12,7 @@ export const Navbar = () => {
             <Main>
                 <Wrapper>
                     <Section onClick={() => navigate('/home')} logo>
-                        <Logo /> <h3>Houzing</h3>
+                        <Logo /> <LogoTitle>Houzing</LogoTitle>
                     </Section>
                     <Section>
                         {
@@ -27,6 +28,7 @@ export const Navbar = () => {
                     </Section>
                 </Wrapper>
             </Main>
+            <Filter />
             <Outlet />
         </Container>
     )

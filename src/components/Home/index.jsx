@@ -6,7 +6,7 @@ export const Home = () => {
     return (
         <Container>
             Home
-            <Input placeholder={'isma'} />
+            <Input width={120} placeholder={'isma'} />
         </Container>
     )
 }

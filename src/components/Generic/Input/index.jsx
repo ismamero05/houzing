@@ -1,10 +1,37 @@
-import React from "react";
-import { Container } from "./style";
+import React, { forwardRef } from "react";
+import { Container, Icon, Wrapper } from "./style";
 
-const Input = ({width, height, name, type, onChange, placeholder, value, defaultValue}) => {
-    return (
-        <Container value={value} defaultValue={defaultValue} width={width} height={height} name={name} placeholder={placeholder} onChange={onChange} type={type} />
-    )
-}
+export const Input = forwardRef ((
+    {
+    width,
+    height,
+    name,
+    type,
+    onChange,
+    placeholder,
+    value,
+    defaultValue, 
+    icon,
+    },
+    ref
+    ) => {
+        return (
+            <Wrapper>
+                <Icon>{icon}</Icon>
+                <Container 
+                ref={ref}
+                icon={icon} 
+                value={value} 
+                defaultValue={defaultValue} 
+                width={width} 
+                height={height} 
+                name={name} 
+                placeholder={placeholder} 
+                onChange={onChange} 
+                type={type}
+                />
+            </Wrapper>
+        )
+    })
 
 export default Input

@@ -43,10 +43,22 @@ const Container = styled.input`
 
     height: ${({fontSize}) => (fontSize ? `${fontSize}px` : '14px')};
     height: ${({height}) => (height ? `${height}px` : '44px')};
-    width: ${({width}) => (width ? `${width}px` : '130px')};
+    width: ${({width}) => (width ? `${width}px` : '100%')};
+    padding-left: ${({icon}) => icon?'40px' : '20px'};
     
-    cursor: pointer;
+    `
 
+const Wrapper = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: ${({width}) => (width ? `${width}px` : '100%')};
 `
 
-export { Container }
+const Icon = styled.div`
+    position: absolute;
+    left: 10px;
+    top: 15px;
+`
+
+export { Container, Wrapper, Icon }
