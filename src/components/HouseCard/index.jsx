@@ -1,14 +1,14 @@
 import { Container, Content, Details, Img, Icons, Divider } from './style';
-// import noimg from '../../assets/images/noimg.png';
+import noimg from '../../assets/images/noimg.png';
 
 export const HouseCard = ({data = {}}) => {
-  const { attachments, houseDetails, salePrice, price, address, city, country, description } = data
+  const { attachments, houseDetails, salePrice, price, address, city, country, description, category } = data
   return (
     <Container>
-      <Img src={attachments && attachments[0]?.imgPath} />
+      <Img src={(attachments && attachments[0]?.imgPath) || noimg} />
       <Content>
-        <div className='subTitle inline'>{address}</div>
-        <div className='info inline'>{description}, {city}, {country}</div>
+        <div className='subTitle inline'>{description}, {city}, {country}</div>
+        <div className='info inline'>{address} - {category?.name || 'category'}</div>
         <Details>
           <Details.Item>
             <Icons.Bed />

@@ -3,9 +3,8 @@ import { ReactComponent as arrowRight } from "../../assets/icons/arrow-right.svg
 import { ReactComponent as arrowLeft } from "../../assets/icons/arrow-left.svg";
 
 const Container = styled.div`
-    height: 571px;
+    height: fit-content;
     position: relative;
-    border: 1px solid black;
 `
 
 const ArrowRight = styled(arrowRight)`
